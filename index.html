@@ -77,7 +77,6 @@
   }
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:860px;margin:0 auto;}
-
   .mono{font-family:'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;}
 
   nav{
@@ -389,13 +388,13 @@
       <span class="code mono">200 OK</span> — Open to permanent Java / backend roles in the UK
     </div>
     <h1>Haider Ali</h1>
-    <div class="role">Senior Java Developer — Spring Boot &amp; Microservices</div>
-    <p class="lede">Six years designing, building, and supporting business-critical enterprise applications on Java, Spring Boot, and microservices — with a strong focus on REST API design, distributed systems, and production reliability. Recently extended into cloud-native machine learning through an MSc in Computer Science. Full-time UK working rights.</p>
-    <p class="loc mono">London, United Kingdom</p>
+    <div class="role">Senior Java Developer — Spring Boot, Microservices | Cloud Native Apps</div>
+    <p class="lede">Senior Software Developer with 6 years of commercial experience architecting and delivering business-critical enterprise systems using Java 17/21, Spring Boot, and microservices. Led the migration of a monolithic enterprise platform into a 22+ microservices architecture on AWS, cutting release cycles from weeks to days while sustaining 99.9%+ production uptime. Expert in REST API development, event streaming (RabbitMQ, Kafka-aware), caching (Redis, Ehcache), and NoSQL databases. Experienced leading and mentoring engineering teams, with full SDLC delivery across agile environments. MSc in Computer Science (University of Greenwich), with hands-on cloud-native and AI-assisted development experience.</p>
+    <p class="loc mono">London, United Kingdom · Full-time UK working rights</p>
 
     <div class="stats">
       <div class="stat"><b>6</b><span>years experience</span></div>
-      <div class="stat"><b>19</b><span>microservices delivered</span></div>
+      <div class="stat"><b>22+</b><span>microservices delivered</span></div>
       <div class="stat"><b>4+2</b><span>engineers led</span></div>
       <div class="stat"><b>85%+</b><span>test coverage</span></div>
     </div>
@@ -406,81 +405,48 @@
     <div class="eyebrow"><span class="verb">GET</span> /experience — 200 OK</div>
     <div class="role-card">
       <div class="role-head">
-        <h3>Senior Software Engineer, Java</h3>
+        <h3>Senior Software Engineer — Java</h3>
         <span class="dates">Sept 2019 – Sept 2025</span>
       </div>
-      <div class="role-sub">GRID Systems (Pvt) Ltd · Islamabad, Pakistan</div>
-      <p class="role-intro"><em>Enterprise travel management platform serving enterprise and consumer users (Java, Spring Boot, microservices).</em> Progressed from Software Engineer (2019) to technical lead (2023) to Senior Software Engineer (2024). Owned architecture decisions for the migration to microservices and coordinated with Business Analysis, DevOps, Application Support, and QA teams.</p>
+      <div class="role-sub">Global Rescue LLC / GRID Systems (Pvt) Ltd · Islamabad, Pakistan</div>
+      <p class="role-intro"><em>Enterprise travel management platform serving enterprise and consumer users (Java, Spring Boot, microservices).</em> Progressed from Software Engineer to technical lead (2023) to Senior Software Engineer (2024), owning architecture decisions and driving testing and code-quality practices across the team.</p>
 
-      <div class="sub">Enterprise Application Development &amp; Microservices</div>
+      <div class="sub">Architecture &amp; Microservices Migration</div>
       <ul class="bullets">
-        <li>Architected and delivered a <strong>microservices platform of 19 services</strong> from a monolithic enterprise travel platform, decomposing the domain into loosely-coupled, independently deployable services with clear bounded contexts and contracts.</li>
-        <li>Owned the service decomposition strategy — defining service boundaries, inter-service contracts, and data ownership to minimise coupling and eliminate shared-state bottlenecks.</li>
-        <li>Designed and delivered <strong>production REST APIs</strong> across all 19 services, covering itinerary management, enterprise and consumer reporting, user/account management, travel duration calculation for risk analysis, and real-time location tracking — serving thousands of enterprise and consumer users in production today.</li>
-        <li>Built the <strong>Reporting API</strong> from scratch to replace a manual support-team process, replacing spreadsheet-driven reporting with a unified reporting surface consumed by internal operations teams and end-user applications.</li>
-        <li>Cut release cycles from <strong>weeks to days</strong> by enabling independent service deployments, and reduced the blast radius of change from whole-platform releases to single-service deployments.</li>
-        <li>Refactored and modernised <strong>legacy codebases</strong> during the migration, deleting obsolete code and reducing technical debt while maintaining backward compatibility with existing consumers.</li>
+        <li>Architected and delivered a <strong>22+ microservices platform</strong> from a monolithic enterprise system (EJBs, Servlets, JSP, JSF), defining service boundaries, contracts, and data ownership to remove shared-state bottlenecks.</li>
+        <li>Built <strong>production REST APIs</strong> across all 22+ services, covering itinerary management, reporting, user/account management, and real-time location tracking — serving thousands of enterprise and consumer users today. Delivered a <strong>Reporting API</strong> from scratch that replaced a manual, spreadsheet-driven support process.</li>
+        <li>Applied <strong>API-first design</strong> (versioning, contract-first development, consistent error semantics, pagination, caching) so services could evolve independently — cutting release cycles from <strong>weeks to days</strong> and reducing the blast radius of change from whole-platform to single-service.</li>
       </ul>
 
-      <div class="sub">Distributed Systems &amp; Asynchronous Processing</div>
+      <div class="sub">Distributed Systems, Event Streaming &amp; Data</div>
       <ul class="bullets">
-        <li>Replaced synchronous REST calls between services with <strong>asynchronous messaging via RabbitMQ (AMQP)</strong>, reducing inter-service latency by up to <strong>50%</strong> and improving throughput and resilience under load.</li>
-        <li>Introduced <strong>priority queues, dead-letter queues, and retry mechanisms</strong> in RabbitMQ to handle a production backlog where lower-priority provider traffic was blocking user-facing messages — restoring responsiveness and ensuring failed messages were handled cleanly rather than silently dropped.</li>
-        <li>Designed <strong>AOP-based centralised error handling, logging, and observability</strong> — reducing system-critical downtime by <strong>15%</strong> and accelerating incident resolution by <strong>30%</strong>.</li>
-        <li>Investigated and resolved recurring <strong>database deadlocks</strong> by refactoring nested persistence logic, improving database stability and reducing downtime by <strong>40%</strong>.</li>
+        <li>Replaced synchronous REST calls with <strong>asynchronous messaging and event streaming via RabbitMQ (AMQP)</strong>, cutting inter-service latency by up to <strong>50%</strong>; introduced priority queues, dead-letter queues, and retry logic to fix a production backlog where low-priority traffic was blocking user-facing messages.</li>
+        <li>Integrated <strong>Redis and Ehcache</strong> for caching frequently accessed data, reducing database load and improving response times for high-traffic endpoints.</li>
+        <li>Designed <strong>AOP-based centralised error handling and observability</strong>, cutting critical downtime by <strong>15%</strong> and accelerating incident resolution by <strong>30%</strong>; separately resolved recurring database deadlocks, reducing downtime by a further <strong>40%</strong>.</li>
+        <li>Integrated <strong>Elasticsearch</strong> to replace slow SQL-based search — built custom mappings, analyzers, and query DSL to support full-text, fuzzy, and filtered search, cutting search response times from <strong>~2s to under 300ms (85% faster)</strong>.</li>
+        <li>Optimised complex <strong>SQL, stored procedures, and relational schemas</strong> (MySQL, PostgreSQL) for reporting, billing, and risk-analysis workloads; integrated <strong>Hibernate Envers</strong> for full entity auditing and regulatory traceability.</li>
       </ul>
 
-      <div class="sub">Databases &amp; Query Optimisation</div>
+      <div class="sub">Cloud, DevOps &amp; Quality</div>
       <ul class="bullets">
-        <li>Developed and <strong>optimised complex SQL queries</strong>, stored procedures, CTEs, and data models to ensure high-performance data retrieval across critical business systems.</li>
-        <li>Designed and evolved relational schemas (MySQL, PostgreSQL) to support reporting, billing, and risk-analysis use cases; tuned indexing and query plans for high-volume workloads.</li>
-        <li>Integrated Hibernate Envers for full entity auditing, ensuring <strong>data integrity, regulatory compliance, and complete traceability</strong> across critical transactions.</li>
+        <li>Deployed the platform on <strong>AWS (EC2, S3, Lambda, API Gateway, RDS)</strong>, containerised with <strong>Docker</strong>, orchestrated with <strong>Kubernetes</strong>, and delivered via automated CI/CD — achieving <strong>99.9%+ production uptime</strong> through health checks and automated rollback.</li>
+        <li>Automated build, test, and deployment, eliminating most manual release steps and standardising <strong>trunk-based Git workflows</strong> with peer-reviewed pull requests.</li>
+        <li>Drove <strong>85%+ unit/integration test coverage</strong> using TDD and left-most automated testing (JUnit, Mockito), reducing production defects; led design and code reviews across the team.</li>
+        <li>Monitored production with <strong>Prometheus, Grafana, and AWS CloudWatch</strong> — metrics, dashboards, alerting, and centralised logging for incident diagnosis.</li>
       </ul>
 
-      <div class="sub">Cloud-Native Development &amp; CI/CD</div>
+      <div class="sub">Leadership &amp; Collaboration</div>
       <ul class="bullets">
-        <li>Designed and deployed <strong>cloud-native services on AWS (EC2, S3, Lambda, API Gateway, RDS)</strong> for a 19-service microservices platform, containerised with <strong>Docker</strong> and delivered through <strong>automated CI/CD pipelines</strong> — enabling zero-downtime releases across production.</li>
-        <li>Cut release cycles from <strong>weeks to days</strong> (~80% reduction in lead time) by automating build, test, and deployment pipelines, allowing the team to ship continuously rather than in quarterly release windows.</li>
-        <li>Automated build, testing, deployment, and release activities, eliminating the majority of manual release steps and reducing human error in deployments.</li>
-        <li>Standardised source control and collaborative workflows using <strong>Git, GitLab, and GitHub</strong> — including trunk-based branching, peer-reviewed pull requests, and protected release branches.</li>
-      </ul>
-
-      <div class="sub">Testing &amp; Code Quality</div>
-      <ul class="bullets">
-        <li>Developed comprehensive <strong>unit and integration tests</strong> using <strong>JUnit and Mockito</strong> as part of a TDD approach — achieving <strong>85%+ code coverage</strong> and significantly reducing production defects.</li>
-        <li>Participated in <strong>design reviews and peer code reviews</strong>, promoting best practices and maintaining high standards of software quality.</li>
-        <li>Familiar with <strong>Testcontainers</strong> for containerised integration testing and keen to adopt it where the team standard requires it.</li>
-      </ul>
-
-      <div class="sub">Production Support &amp; Problem Solving</div>
-      <ul class="bullets">
-        <li>Provided <strong>third-line technical support</strong> for complex application and platform issues, acting as a subject-matter expert on the platform.</li>
-        <li>Diagnosed and resolved production incidents end-to-end — using logs, metrics, and message tracing to isolate root cause, weighing options, and implementing fixes (including the RabbitMQ priority queue incident above).</li>
-        <li>Designed solutions for <strong>open-ended problems</strong>, translating ambiguous requirements into robust technical solutions.</li>
-        <li>Integrated with <strong>legacy backend services</strong> from previous generations, ensuring seamless communication between new and heritage systems.</li>
-      </ul>
-
-      <div class="sub">Full Stack Delivery &amp; AI-Assisted Engineering</div>
-      <ul class="bullets">
-        <li>Delivered full-stack features across <strong>Java / Spring Boot backends</strong> and <strong>React / Angular front ends</strong>, owning both API contract and client-facing UI implementation.</li>
-        <li>Used <strong>Claude Code</strong> and <strong>ChatGPT</strong> as part of daily development workflow for code generation, refactoring, test scaffolding, and troubleshooting — improving delivery speed and code quality.</li>
-        <li>Embraced a self-starting approach, proactively identifying technical debt, proposing improvements, and taking ownership of end-to-end delivery.</li>
-      </ul>
-
-      <div class="sub">Collaboration, Leadership &amp; Mentoring</div>
-      <ul class="bullets">
-        <li>Led a team of <strong>4 developers plus a 2-person Application Support team</strong> from 2023; ran technical interviews (30+ candidates) and selected 3 hires who became strong-performing team members.</li>
-        <li>Trained and onboarded <strong>10+ new joiners company-wide</strong> over the final three years of tenure, acting as a go-to technical mentor.</li>
-        <li>Actively participated in <strong>technical design discussions and architecture decisions</strong>, contributing to engineering standards across the team.</li>
-        <li>Collaborated with <strong>Business Analysts, Product Owners, QA teams, DevOps, designers, and stakeholders</strong> throughout the full SDLC to align technical delivery with business objectives.</li>
-        <li>Held <strong>weekly calls with the US head office</strong>, gathering requirements directly from sales and account management stakeholders and presenting and justifying technical and architectural decisions to the IT Vice President.</li>
+        <li>Led a team of <strong>4 developers plus a 2-person Application Support team</strong> from 2023; ran <strong>30+ technical interviews</strong> and hired 3 strong performers.</li>
+        <li>Trained and mentored <strong>10+ new joiners company-wide</strong>; held weekly calls with the US head office to gather requirements and present architectural decisions to the IT Vice President.</li>
+        <li>Delivered full-stack features across <strong>Java/Spring Boot and React/Angular</strong>, using <strong>Claude Code and ChatGPT</strong> in daily workflow for code generation, refactoring, and test scaffolding.</li>
       </ul>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="eyebrow"><span class="verb">GET</span> /projects — 4 results</div>
+    <div class="eyebrow"><span class="verb">GET</span> /projects — 3 results</div>
     <div class="projects">
 
       <div class="pcard wide">
@@ -489,16 +455,17 @@
             <div class="ppath"><span class="m">GET</span> /projects/accident-detection</div>
             <h3>Road Traffic Accident Detection &amp; Real-Time Dashboard</h3>
           </div>
-          <span class="chip">MSc Major Project · 2026</span>
+          <span class="chip">MSc Major Project</span>
         </div>
-        <p>End-to-end deep learning system that classifies dashcam footage and pushes live alerts to a web dashboard — from data pipeline through to cloud deployment.</p>
+        <p>End-to-end deep learning pipeline classifying dashcam video and pushing live alerts to a web dashboard — from data pipeline through to cloud deployment.</p>
         <div class="tags">
           <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span>
-          <span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span><span class="tag">Google Cloud Run</span>
+          <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span>
+          <span class="tag">Docker</span><span class="tag">Google Cloud Run</span><span class="tag">Auth0</span>
         </div>
         <ul>
-          <li>Diagnosed a first model that scored below a majority-class baseline; root-caused a frame-sampling data leak and rebuilt it as R(2+1)D-18, a 3D convolutional network, lifting accuracy from 59.4% to 73.8%.</li>
-          <li>Shipped the full stack — JWT-authenticated FastAPI backend, PostgreSQL, real-time WebSocket alerts, React dashboard — deployed across Google Cloud Run and Cloudflare Pages.</li>
+          <li>Built an end-to-end pipeline classifying dashcam video (R(2+1)D-18, Kinetics-400 pretrained), lifting accuracy from <strong>59.4% → 73.8%</strong> and accident-class F1 from <strong>0.436 → 0.643</strong>.</li>
+          <li>Shipped a JWT-authenticated FastAPI backend on Google Cloud Run with PostgreSQL and Auth0 OAuth2/OIDC, plus a React/TypeScript dashboard with live WebSocket alerts and CSV/PDF export.</li>
         </ul>
       </div>
 
@@ -506,16 +473,16 @@
         <div class="prow">
           <div>
             <div class="ppath"><span class="m">GET</span> /projects/parkalot</div>
-            <h3>ParkaLot</h3>
+            <h3>ParkaLot — Cloud Parking Platform</h3>
           </div>
           <span class="chip">High Distinction</span>
         </div>
-        <p>Cloud-based platform coordinating operations across a chain of parking garages.</p>
+        <p>Cloud platform standardising reservations, real-time occupancy tracking, and billing across a chain of parking garages.</p>
         <div class="tags">
           <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span>
         </div>
         <ul>
-          <li>Led system design and the Spring Boot backend build, mentoring group members along the way.</li>
+          <li>Owned the architecture and data model, led the Spring Boot backend build, and mentored the group on backend and system design practice.</li>
           <li>Built reservation and occupancy logic with real-time tracking and automated billing.</li>
         </ul>
       </div>
@@ -537,23 +504,6 @@
         </ul>
       </div>
 
-      <div class="pcard wide">
-        <div class="prow">
-          <div>
-            <div class="ppath"><span class="m">GET</span> /projects/parliamentary-motion-analysis</div>
-            <h3>Parliamentary Motion Analysis</h3>
-          </div>
-          <span class="chip">High Distinction</span>
-        </div>
-        <p>Supervised text classifier predicting the policy topic of UK House of Commons motions across 6 classes, with a critical ethical risk assessment using the Data Hazards framework.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">SVM</span>
-        </div>
-        <ul>
-          <li>Trained an SVM classifier reaching 93% accuracy across 6 policy-topic classes.</li>
-        </ul>
-      </div>
-
     </div>
   </section>
 
@@ -564,13 +514,13 @@
       <div class="skillgroup">
         <span class="k">Languages</span>
         <div class="chiprow">
-          <span class="tag">Java 17/21</span><span class="tag">Java 8/11</span><span class="tag">SQL</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span>
+          <span class="tag">Java 17/21</span><span class="tag">Java 8/11</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span>
         </div>
       </div>
       <div class="skillgroup">
         <span class="k">Frameworks</span>
         <div class="chiprow">
-          <span class="tag">Spring Boot</span><span class="tag">Spring MVC</span><span class="tag">Hibernate</span><span class="tag">JPA</span>
+          <span class="tag">Spring Boot</span><span class="tag">Spring MVC</span><span class="tag">Hibernate</span><span class="tag">JPA</span><span class="tag">FastAPI</span><span class="tag">Servlets</span><span class="tag">JSP</span><span class="tag">JSF</span>
         </div>
       </div>
       <div class="skillgroup">
@@ -580,48 +530,75 @@
         </div>
       </div>
       <div class="skillgroup">
-        <span class="k">Architecture &amp; APIs</span>
+        <span class="k">Architecture &amp; Patterns</span>
         <div class="chiprow">
-          <span class="tag">Microservices</span><span class="tag">REST APIs</span><span class="tag">API-First</span><span class="tag">Event-Driven</span><span class="tag">BFF</span><span class="tag">OpenAPI</span>
+          <span class="tag">Microservices</span><span class="tag">SOA</span><span class="tag">Event-Driven</span><span class="tag">API-First</span><span class="tag">DDD</span><span class="tag">AOP</span><span class="tag">Asynchronous Programming</span>
         </div>
       </div>
       <div class="skillgroup">
-        <span class="k">Messaging</span>
+        <span class="k">APIs</span>
         <div class="chiprow">
-          <span class="tag">RabbitMQ (AMQP)</span><span class="tag">Priority Queues</span><span class="tag">DLQ</span><span class="tag">Retry Mechanisms</span>
+          <span class="tag">RESTful API Design</span><span class="tag">API Security</span><span class="tag">BFF</span><span class="tag">OpenAPI</span>
         </div>
       </div>
       <div class="skillgroup">
-        <span class="k">Databases</span>
+        <span class="k">Messaging &amp; Streaming</span>
         <div class="chiprow">
-          <span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Oracle</span><span class="tag">Hibernate Envers</span>
+          <span class="tag">RabbitMQ (AMQP)</span><span class="tag">Priority Queues</span><span class="tag">DLQ</span><span class="tag">Retry Patterns</span><span class="tag">Kafka-aware</span>
         </div>
       </div>
       <div class="skillgroup">
-        <span class="k">Cloud &amp; DevOps</span>
+        <span class="k">Caching</span>
         <div class="chiprow">
-          <span class="tag">AWS (EC2, S3, Lambda, API Gateway, RDS)</span>
-          <span class="tag">Docker</span><span class="tag">CI/CD</span><span class="tag">Git</span>
-          <span class="tag">GitLab</span><span class="tag">GitHub</span>
+          <span class="tag">Redis</span><span class="tag">Ehcache</span><span class="tag">Caching Strategies</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <span class="k">Cloud &amp; Containers</span>
+        <div class="chiprow">
+          <span class="tag">AWS (EC2, S3, Lambda, API Gateway, RDS)</span><span class="tag">Docker</span><span class="tag">Kubernetes</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <span class="k">Observability</span>
+        <div class="chiprow">
+          <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">AWS CloudWatch</span><span class="tag">Centralised Logging</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <span class="k">CI/CD &amp; Tooling</span>
+        <div class="chiprow">
+          <span class="tag">Maven</span><span class="tag">Gradle</span><span class="tag">Git</span><span class="tag">GitLab</span><span class="tag">GitHub CI/CD</span>
         </div>
       </div>
       <div class="skillgroup">
         <span class="k">Testing</span>
         <div class="chiprow">
-          <span class="tag">JUnit</span><span class="tag">Mockito</span><span class="tag">TDD</span><span class="tag">Testcontainers</span>
+          <span class="tag">TDD</span><span class="tag">Left-most Testing</span><span class="tag">JUnit</span><span class="tag">Mockito</span><span class="tag">Integration Testing</span>
         </div>
       </div>
       <div class="skillgroup">
-        <span class="k">AI &amp; ML</span>
+        <span class="k">Databases</span>
         <div class="chiprow">
-          <span class="tag">PyTorch</span><span class="tag">Scikit-learn</span><span class="tag">FastAPI</span>
-          <span class="tag">Pandas</span><span class="tag">NumPy</span>
+          <span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Oracle SQL</span><span class="tag">MongoDB</span><span class="tag">Hibernate Envers</span><span class="tag">Data Modelling</span>
         </div>
       </div>
       <div class="skillgroup">
-        <span class="k">AI-Assisted Engineering</span>
+        <span class="k">Performance &amp; Search</span>
+        <div class="chiprow">
+          <span class="tag">Low-latency Optimisation</span><span class="tag">Query Plan Tuning</span><span class="tag">Elasticsearch</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <span class="k">AI-Assisted Development</span>
         <div class="chiprow">
           <span class="tag">Claude Code</span><span class="tag">ChatGPT</span><span class="tag">Lovable</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <span class="k">Practices</span>
+        <div class="chiprow">
+          <span class="tag">Agile/Scrum</span><span class="tag">Code Review</span><span class="tag">Design Review</span><span class="tag">Production Support</span><span class="tag">Mentoring</span>
         </div>
       </div>
     </div>
@@ -635,22 +612,22 @@
         <h4>Degree</h4>
         <div class="edu-item">
           <b>MSc Computer Science</b>
-          <span>Queen Mary University of London · 2024–2025</span>
+          <span>University of Greenwich · London, UK · Sept 2025 – Aug 2026</span>
         </div>
         <div class="edu-item">
           <b>BSc Computer Science</b>
-          <span>COMSATS University Islamabad · 2015–2019</span>
+          <span>FAST National University of Computer &amp; Emerging Sciences (NUCES) · Islamabad, Pakistan · Aug 2015 – Aug 2019</span>
         </div>
       </div>
       <div class="edu-block">
-        <h4>Certifications &amp; Focus</h4>
+        <h4>Focus Areas</h4>
         <div class="edu-item">
-          <b>Cloud-Native Machine Learning</b>
-          <span>MSc specialisation · 2025</span>
+          <b>Cloud-Native &amp; Machine Learning</b>
+          <span>MSc specialisation · 2025–2026</span>
         </div>
         <div class="edu-item">
           <b>Oracle SQL &amp; Data Warehousing</b>
-          <span>Coursework · High Distinction</span>
+          <span>Postgraduate coursework · High Distinction</span>
         </div>
       </div>
     </div>
@@ -663,10 +640,10 @@
       <h2>Let's talk about your backend team.</h2>
       <p>I'm open to permanent Java / backend roles in the UK. The fastest way to reach me is email — I usually respond within a day.</p>
       <div class="btnrow">
-        <a class="btn primary" href="mailto:your.email@example.com">✉ Email me</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">in LinkedIn</a>
+        <a class="btn primary" href="mailto:haider0017@hotmail.com">✉ Email me</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/haider0017" target="_blank" rel="noopener">in LinkedIn</a>
         <a class="btn ghost" href="https://github.com/haali512" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="/cv.pdf" download>↓ Download CV</a>
+        <a class="btn ghost" href="tel:+447741263786">☎ 07741 263786</a>
       </div>
     </div>
   </section>
