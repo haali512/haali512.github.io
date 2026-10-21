@@ -1,657 +1,546 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haider Ali — Senior Java Developer</title>
-<meta name="description" content="Senior Java Developer specialising in Spring Boot, microservices, and distributed systems. Open to permanent Java / backend roles in the UK.">
+<title>Haider Ali, Senior Java Developer</title>
+<meta name="description" content="Haider Ali is a London-based Senior Java Developer with 6 years' experience building Spring Boot microservices, event-driven systems and cloud delivery for enterprise platforms.">
+<meta name="author" content="Haider Ali">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Haider Ali, Senior Java Developer">
+<meta property="og:description" content="Spring Boot microservices, event-driven systems and cloud delivery. Based in London.">
+<meta property="og:url" content="https://haali512.github.io">
+<meta name="theme-color" content="#EDF0F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121922" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232846C4'/%3E%3Ctext x='16' y='21.5' font-family='Arial,sans-serif' font-size='14' font-weight='700' fill='white' text-anchor='middle'%3EHA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Haider Ali",
+  "jobTitle": "Senior Java Developer",
+  "address": {"@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB"},
+  "alumniOf": ["University of Greenwich", "FAST National University of Computer and Emerging Sciences"],
+  "knowsAbout": ["Java", "Spring Boot", "Microservices", "Event-driven architecture", "RabbitMQ", "Elasticsearch", "AWS", "CI/CD"],
+  "sameAs": ["https://www.linkedin.com/in/haider0017", "https://github.com/haali512"]
+}
+</script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
   :root{
-    --bg:#F6F3EC;
-    --surface:#FFFFFF;
-    --surface-2:#EFEAE0;
-    --border:#DCD5C6;
-    --text:#211C14;
-    --text-muted:#6B6452;
-    --accent:#9C6B1F;
-    --accent-soft:#EAD9B4;
-    --accent-on:#2A1D06;
-    --ok:#2F7A5C;
-    --ok-soft:rgba(47,122,92,0.12);
-    --ok-border:rgba(47,122,92,0.35);
-    --info:#3A66A8;
-    --shadow: 0 1px 2px rgba(33,28,20,0.06), 0 8px 24px rgba(33,28,20,0.05);
-    --shadow-hover: 0 2px 4px rgba(33,28,20,0.08), 0 16px 40px rgba(33,28,20,0.09);
+    --paper:#EDF0F3;
+    --raised:#F8F9FB;
+    --ink:#17202B;
+    --muted:#56626F;
+    --line:#C9D1DB;
+    --accent:#2846C4;
+    --accent-ink:#FFFFFF;
+    --accent-wash:#DCE3FA;
+    --mono:'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --sans:'Schibsted Grotesk', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#0E141F;
-      --surface:#161D2C;
-      --surface-2:#1C2436;
-      --border:#2B3548;
-      --text:#EAEDF3;
-      --text-muted:#8C96AC;
-      --accent:#D2A24C;
-      --accent-soft:#3A2E17;
-      --accent-on:#1B1200;
-      --ok:#4CAF8C;
-      --ok-soft:rgba(76,175,140,0.12);
-      --ok-border:rgba(76,175,140,0.35);
-      --info:#6C9BF0;
-      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px rgba(0,0,0,0.35);
-      --shadow-hover: 0 2px 6px rgba(0,0,0,0.35), 0 20px 48px rgba(0,0,0,0.45);
+      --paper:#121922; --raised:#18212C; --ink:#E5EAF0; --muted:#97A3B1;
+      --line:#2C3846; --accent:#8EA4FF; --accent-ink:#0E1630; --accent-wash:#1F2A4D;
     }
   }
   :root[data-theme="dark"]{
-    --bg:#0E141F;
-    --surface:#161D2C;
-    --surface-2:#1C2436;
-    --border:#2B3548;
-    --text:#EAEDF3;
-    --text-muted:#8C96AC;
-    --accent:#D2A24C;
-    --accent-soft:#3A2E17;
-    --accent-on:#1B1200;
-    --ok:#4CAF8C;
-    --ok-soft:rgba(76,175,140,0.12);
-    --ok-border:rgba(76,175,140,0.35);
-    --info:#6C9BF0;
-    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px rgba(0,0,0,0.35);
-    --shadow-hover: 0 2px 6px rgba(0,0,0,0.35), 0 20px 48px rgba(0,0,0,0.45);
+    --paper:#121922; --raised:#18212C; --ink:#E5EAF0; --muted:#97A3B1;
+    --line:#2C3846; --accent:#8EA4FF; --accent-ink:#0E1630; --accent-wash:#1F2A4D;
   }
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
   body{
-    margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:'IBM Plex Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
-    font-size:16px;
-    line-height:1.65;
-    padding-inline:24px;
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-size:17px;line-height:1.6;
     -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
   }
-  a{color:inherit;text-decoration:none;}
-  .wrap{max-width:860px;margin:0 auto;}
-  .mono{font-family:'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;}
+  a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px;}
+  a:hover{text-decoration-thickness:2px;}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
+  .container{max-width:1080px;margin:0 auto;padding-inline:24px;}
+  .skip{position:absolute;left:-9999px;}
+  .skip:focus{left:16px;top:12px;background:var(--raised);padding:8px 12px;z-index:50;}
 
-  nav{
-    position:sticky;top:0;z-index:20;
-    background:var(--bg);
-    background:color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--border);
-    padding-block:14px;
-    margin-inline:-24px;
-    padding-inline:24px;
+  /* Header */
+  header.site{
+    position:sticky;top:0;z-index:30;
+    background:color-mix(in srgb, var(--paper) 90%, transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
   }
-  .navrow{
-    max-width:860px;margin:0 auto;
-    display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px;}
+  .wordmark{font-weight:800;font-size:1.02rem;color:var(--ink);text-decoration:none;letter-spacing:-0.01em;}
+  nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;}
+  nav a{color:var(--muted);text-decoration:none;font-size:0.95rem;font-weight:500;}
+  nav a:hover{color:var(--ink);}
+  .bar-right{display:flex;align-items:center;gap:18px;}
+  .theme{
+    background:none;border:1px solid var(--line);color:var(--muted);
+    width:36px;height:36px;border-radius:50%;cursor:pointer;display:grid;place-items:center;
   }
-  .brand{
-    font-family:'IBM Plex Mono', monospace;
-    font-weight:500;font-size:0.95rem;
-    display:flex;align-items:center;gap:0.55em;
-  }
-  .brand .dot{
-    width:8px;height:8px;border-radius:50%;background:var(--ok);
-    box-shadow:0 0 0 3px var(--ok-soft);
-    animation:pulse 2.6s ease-in-out infinite;
-  }
-  @media (prefers-reduced-motion: reduce){ .brand .dot{animation:none;} }
-  @keyframes pulse{
-    0%,100%{opacity:1;}
-    50%{opacity:0.45;}
-  }
-  .brand .tld{color:var(--text-muted);}
-  .navlinks{display:flex;gap:1.4rem;flex-wrap:wrap;}
-  .navlinks a{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.85rem;color:var(--text-muted);
-    border-bottom:1px solid transparent;
-    padding-block:2px;
-    transition:color 0.15s ease, border-color 0.15s ease;
-  }
-  .navlinks a:hover, .navlinks a:focus-visible{color:var(--accent);border-color:var(--accent);}
-  .navlinks a .m{color:var(--info);font-weight:500;}
-  @media (max-width:720px){
-    .navlinks{display:none;}
-  }
+  .theme:hover{color:var(--ink);border-color:var(--muted);}
+  .theme svg{width:17px;height:17px;}
+  @media (max-width:760px){ nav{display:none;} }
 
-  section{padding-block:48px;border-top:1px solid var(--border);}
-  section:first-of-type{border-top:none;}
-
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
-    letter-spacing:0.06em;
-    text-transform:uppercase;
-    color:var(--text-muted);
-    display:flex;
-    align-items:center;
-    gap:0.5em;
-    margin-bottom:1.2rem;
-  }
-  .eyebrow .verb{color:var(--accent);font-weight:600;}
-
-  h1,h2,h3,h4{
-    font-family:'Fraunces', Georgia, 'Times New Roman', serif;
-    text-wrap:balance;
-    margin:0;
-    color:var(--text);
-  }
-
-  .hero{padding-block:64px 48px;}
-  .status-badge{
-    display:inline-flex;align-items:center;gap:0.6em;
-    font-family:'IBM Plex Mono', monospace;font-size:0.82rem;
-    color:var(--ok);
-    background:var(--ok-soft);
-    border:1px solid var(--ok-border);
-    padding:6px 14px;border-radius:999px;margin-bottom:1.6rem;
-  }
-  .status-badge .code{color:var(--text-muted);}
+  /* Hero */
+  .hero{padding-block:72px 64px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;align-items:center;}
+  @media (max-width:900px){ .hero{grid-template-columns:1fr;gap:40px;padding-block:48px 40px;} }
   .hero h1{
-    font-size:clamp(2.4rem,1.9rem + 2.4vw,3.8rem);
-    font-weight:600;line-height:1.04;
-    letter-spacing:-0.02em;
+    font-size:clamp(3rem, 2rem + 4.6vw, 5.6rem);font-weight:800;
+    line-height:0.94;letter-spacing:-0.045em;margin:0;
   }
-  .hero .role{
-    font-family:'IBM Plex Mono', monospace;
-    color:var(--accent);font-size:clamp(1rem,0.9rem + 0.4vw,1.15rem);
-    margin-top:0.7rem;font-weight:500;
-  }
-  .hero .lede{
-    margin-top:1.4rem;color:var(--text-muted);
-    font-size:1.05rem;max-width:62ch;
-  }
-  .hero .loc{
-    margin-top:0.8rem;color:var(--text-muted);
-    font-size:0.9rem;
-  }
-
-  .stats{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-    background:var(--border);border:1px solid var(--border);
-    border-radius:12px;overflow:hidden;margin-top:2.4rem;
-    box-shadow:var(--shadow);
-  }
-  @media (max-width:600px){ .stats{grid-template-columns:repeat(2,1fr);} }
-  .stat{background:var(--surface);padding:18px 16px;}
-  .stat b{
-    font-family:'IBM Plex Mono', monospace;font-variant-numeric:tabular-nums;
-    display:block;font-size:1.5rem;color:var(--text);
-    font-weight:500;
-  }
-  .stat span{font-size:0.78rem;color:var(--text-muted);}
-
-  .role-card{
-    background:var(--surface);border:1px solid var(--border);border-radius:14px;
-    padding:28px 30px;box-shadow:var(--shadow);
-  }
-  .role-head{
-    display:flex;justify-content:space-between;flex-wrap:wrap;
-    gap:0.5rem 1.5rem;margin-bottom:0.6rem;
-    align-items:baseline;
-  }
-  .role-head h3{font-size:1.3rem;font-weight:600;}
-  .role-head .dates{
-    font-family:'IBM Plex Mono', monospace;font-size:0.85rem;
-    color:var(--text-muted);white-space:nowrap;
-  }
-  .role-sub{color:var(--text-muted);font-size:0.92rem;margin-bottom:1.1rem;}
-  .role-intro{
-    color:var(--text-muted);font-size:0.94rem;
-    margin-bottom:1.2rem;max-width:65ch;
-  }
-  ul.bullets{margin:0;padding-left:1.2rem;}
-  ul.bullets li{margin-bottom:0.7rem;padding-left:0.2rem;}
-  ul.bullets li::marker{color:var(--accent);}
-  ul.bullets li:last-child{margin-bottom:0;}
-
-  .sub{
-    margin-top:1.4rem;
-    margin-bottom:0.7rem;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.78rem;
-    text-transform:uppercase;
-    letter-spacing:0.05em;
-    color:var(--accent);
-    font-weight:600;
-  }
-  .sub:first-of-type{margin-top:0;}
-
-  .projects{
-    display:grid;grid-template-columns:1fr 1fr;
-    gap:18px;margin-top:0.5rem;
-  }
-  @media (max-width:680px){ .projects{grid-template-columns:1fr;} }
-  .pcard{
-    background:var(--surface);border:1px solid var(--border);border-radius:14px;
-    padding:24px;display:flex;flex-direction:column;gap:12px;
-    box-shadow:var(--shadow);
-    transition:box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
-  }
-  .pcard:hover{
-    box-shadow:var(--shadow-hover);
-    transform:translateY(-2px);
-    border-color:var(--accent);
-  }
-  .pcard.wide{grid-column:1 / -1;}
-  .ppath{
-    font-family:'IBM Plex Mono', monospace;font-size:0.76rem;
-    color:var(--text-muted);margin-bottom:2px;
-  }
-  .ppath .m{color:var(--info);}
-  .prow{
-    display:flex;justify-content:space-between;
-    align-items:flex-start;gap:0.8rem;flex-wrap:wrap;
-  }
-  .pcard h3{font-size:1.14rem;font-weight:600;line-height:1.3;}
-  .chip{
-    font-family:'IBM Plex Mono', monospace;font-size:0.72rem;
-    background:var(--accent-soft);color:var(--accent-on);
-    padding:4px 10px;border-radius:999px;white-space:nowrap;
-    font-weight:500;
-  }
-  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;}
-  .tag{
-    font-family:'IBM Plex Mono', monospace;font-size:0.72rem;
-    color:var(--text-muted);
-    border:1px solid var(--border);
-    padding:3px 9px;border-radius:6px;
-    background:var(--surface-2);
-  }
-  .pcard p{font-size:0.94rem;color:var(--text-muted);margin:0;line-height:1.6;}
-  .pcard ul{
-    margin:2px 0 0;padding-left:1.1rem;font-size:0.9rem;
-    color:var(--text);
-  }
-  .pcard ul li{margin-bottom:0.45rem;}
-  .pcard ul li::marker{color:var(--accent);}
-  .pcard ul li:last-child{margin-bottom:0;}
-
-  .skillgrid{
-    display:grid;grid-template-columns:repeat(2,1fr);
-    gap:20px 32px;margin-top:0.5rem;
-  }
-  @media (max-width:600px){ .skillgrid{grid-template-columns:1fr;} }
-  .skillgroup .k{
-    font-family:'IBM Plex Mono', monospace;font-size:0.76rem;
-    color:var(--accent);
-    text-transform:uppercase;letter-spacing:0.05em;
-    margin-bottom:0.7rem;display:block;font-weight:500;
-  }
-  .chiprow{display:flex;flex-wrap:wrap;gap:6px;}
-  .chiprow .tag{color:var(--text);}
-
-  .edu-grid{
-    display:grid;grid-template-columns:1fr 1fr;
-    gap:32px;margin-top:0.5rem;
-  }
-  @media (max-width:680px){ .edu-grid{grid-template-columns:1fr;gap:24px;} }
-  .edu-block h4{
-    font-family:'IBM Plex Mono', monospace;font-size:0.76rem;
-    color:var(--accent);text-transform:uppercase;
-    letter-spacing:0.05em;margin:0 0 0.8rem;font-weight:500;
-  }
-  .edu-item{margin-bottom:1rem;}
-  .edu-item:last-child{margin-bottom:0;}
-  .edu-item b{display:block;font-size:0.98rem;font-weight:600;margin-bottom:2px;}
-  .edu-item span{color:var(--text-muted);font-size:0.86rem;}
-
-  .contact{
-    background:var(--surface);border:1px solid var(--border);border-radius:16px;
-    padding:40px 34px;text-align:left;box-shadow:var(--shadow);
-  }
-  .contact h2{
-    font-size:1.6rem;font-weight:600;margin-bottom:0.7rem;
-    letter-spacing:-0.01em;
-  }
-  .contact p{color:var(--text-muted);max-width:60ch;font-size:0.98rem;}
-  .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:1.6rem;}
+  .hero .title{font-size:clamp(1.15rem,1rem + 0.6vw,1.45rem);font-weight:600;margin:20px 0 0;letter-spacing:-0.01em;}
+  .hero .pitch{color:var(--muted);font-size:1.1rem;max-width:34em;margin:18px 0 0;}
+  .facts{margin:22px 0 0;padding:0;list-style:none;color:var(--muted);font-size:0.95rem;display:flex;flex-wrap:wrap;gap:6px 22px;}
+  .facts li{display:flex;align-items:center;gap:8px;}
+  .facts .live{width:8px;height:8px;border-radius:50%;background:#2E9A6B;flex:none;}
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
   .btn{
-    font-family:'IBM Plex Mono', monospace;font-size:0.88rem;
-    padding:12px 20px;border-radius:8px;border:1px solid var(--border);
-    display:inline-flex;align-items:center;gap:0.5em;
-    transition:all 0.18s ease;
-    cursor:pointer;
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 20px;border-radius:999px;font-weight:600;font-size:0.97rem;
+    text-decoration:none;border:1.5px solid var(--ink);color:var(--ink);
+    transition:background-color .15s ease,color .15s ease,border-color .15s ease;
   }
-  .btn.primary{
-    background:var(--accent);color:var(--accent-on);
-    border-color:var(--accent);font-weight:500;
-  }
-  .btn.primary:hover{
-    filter:brightness(1.08);
-    transform:translateY(-1px);
-    box-shadow:0 4px 12px rgba(156,107,31,0.25);
-  }
-  .btn.ghost{color:var(--text);}
-  .btn.ghost:hover{
-    border-color:var(--accent);color:var(--accent);
-    transform:translateY(-1px);
-  }
-  a:focus-visible, button:focus-visible{
-    outline:2px solid var(--accent);
-    outline-offset:3px;
-    border-radius:4px;
-  }
+  .btn:hover{background:var(--ink);color:var(--paper);}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);}
+  .btn.primary:hover{filter:brightness(1.08);background:var(--accent);color:var(--accent-ink);}
 
-  footer{
-    padding-block:36px 56px;text-align:center;
-    color:var(--text-muted);font-size:0.82rem;
-    font-family:'IBM Plex Mono', monospace;
-    border-top:1px solid var(--border);
-    margin-top:24px;
-  }
+  /* Hero diagram: the one memorable element */
+  figure.arch{margin:0;}
+  figure.arch svg{width:100%;height:auto;display:block;}
+  figure.arch figcaption{color:var(--muted);font-size:0.88rem;margin-top:12px;max-width:36em;}
+  .d-line{stroke:var(--line);}
+  .d-ink{fill:var(--ink);}
+  .d-muted{fill:var(--muted);}
+  .d-box{fill:var(--raised);stroke:var(--line);}
+  .d-mono{fill:var(--raised);stroke:var(--muted);stroke-dasharray:3 3;}
+  .d-hot{fill:var(--accent);}
+  .d-bus{fill:var(--accent-wash);stroke:var(--accent);}
+  .d-text{font-family:var(--mono);font-size:10.5px;}
+  .d-label{font-family:var(--sans);font-size:12px;font-weight:600;}
+  .svc{animation:appear .5s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--i) * 45ms + 350ms);transform-box:fill-box;transform-origin:center;}
+  .mono-fade{animation:recede 1.2s ease both;animation-delay:200ms;}
+  .bus-in{animation:appear .6s ease both;animation-delay:1.45s;}
+  @keyframes appear{from{opacity:0;transform:scale(.6);}to{opacity:1;transform:none;}}
+  @keyframes recede{from{opacity:1;}to{opacity:.55;}}
+  @media (prefers-reduced-motion: reduce){ .svc,.mono-fade,.bus-in{animation:none;} .mono-fade{opacity:.55;} }
+
+  /* Sections */
+  section.block{padding-block:72px;border-top:1px solid var(--line);}
+  .block-head{display:grid;grid-template-columns:260px 1fr;gap:40px;}
+  @media (max-width:900px){ .block-head{grid-template-columns:1fr;gap:20px;} section.block{padding-block:52px;} }
+  h2{font-size:clamp(1.6rem,1.3rem + 1vw,2.1rem);font-weight:700;letter-spacing:-0.025em;line-height:1.15;margin:0;}
+  .block-head .intro{color:var(--muted);margin:12px 0 0;font-size:0.98rem;max-width:22em;}
+  h3{font-size:1.25rem;font-weight:700;letter-spacing:-0.015em;margin:0;line-height:1.3;}
+
+  /* Impact */
+  .impact{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px;margin:0;}
+  @media (max-width:600px){ .impact{grid-template-columns:1fr;} }
+  .impact div{border-left:2px solid var(--accent);padding-left:16px;}
+  .impact dt{font-size:1.9rem;font-weight:800;letter-spacing:-0.03em;line-height:1.1;font-variant-numeric:tabular-nums;}
+  .impact dd{margin:6px 0 0;color:var(--muted);font-size:0.96rem;}
+
+  /* Case studies */
+  .cases{display:flex;flex-direction:column;gap:48px;}
+  .case{display:grid;grid-template-columns:1fr;gap:14px;}
+  .case .context{color:var(--muted);font-size:0.95rem;margin:0;}
+  .case dl{display:grid;grid-template-columns:110px 1fr;gap:10px 20px;margin:6px 0 0;}
+  @media (max-width:600px){ .case dl{grid-template-columns:1fr;gap:2px;} .case dd{margin-bottom:10px;} }
+  .case dt{font-weight:700;font-size:0.95rem;}
+  .case dd{margin:0;max-width:62ch;}
+  .stack{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 0;padding:0;list-style:none;}
+  .stack li{font-size:0.82rem;font-weight:500;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:3px 11px;}
+  .result{font-weight:600;}
+
+  /* Experience timeline: a real sequence */
+  .timeline{list-style:none;margin:0;padding:0;position:relative;}
+  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:2px;background:var(--line);}
+  .timeline > li{position:relative;padding-left:36px;padding-bottom:40px;}
+  .timeline > li:last-child{padding-bottom:0;}
+  .timeline > li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:50%;background:var(--paper);border:2px solid var(--accent);}
+  .timeline > li:first-child::before{background:var(--accent);}
+  .role-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 16px;}
+  .dates{color:var(--muted);font-size:0.92rem;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .org{color:var(--muted);margin:4px 0 14px;font-size:0.96rem;}
+  .timeline ul{margin:0;padding-left:1.15rem;}
+  .timeline ul li{margin-bottom:8px;max-width:68ch;}
+  .timeline ul li::marker{color:var(--accent);}
+
+  /* Other projects */
+  .others{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;padding-top:36px;border-top:1px dashed var(--line);}
+  @media (max-width:700px){ .others{grid-template-columns:1fr;} }
+  .others h4{font-size:1.05rem;margin:0 0 6px;font-weight:700;}
+  .others p{margin:0;color:var(--muted);font-size:0.96rem;}
+
+  /* Skills */
+  .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 40px;margin:0;}
+  @media (max-width:600px){ .skills{grid-template-columns:1fr;} }
+  .skills dt{font-weight:700;margin-bottom:4px;}
+  .skills dd{margin:0;color:var(--muted);}
+
+  /* Education */
+  .edu{display:grid;gap:22px;}
+  .edu-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;}
+  .edu-row b{font-weight:700;}
+  .edu-row p{margin:2px 0 0;color:var(--muted);}
+
+  /* Contact */
+  .contact{background:var(--ink);color:var(--paper);border-radius:22px;padding:56px 48px;margin-block:72px;}
+  @media (max-width:600px){ .contact{padding:40px 24px;border-radius:16px;} }
+  .contact h2{color:var(--paper);font-size:clamp(1.9rem,1.4rem + 2vw,2.8rem);max-width:16em;}
+  .contact p{color:color-mix(in srgb, var(--paper) 72%, transparent);max-width:36em;margin:16px 0 0;font-size:1.05rem;}
+  .contact .btn{border-color:var(--paper);color:var(--paper);}
+  .contact .btn:hover{background:var(--paper);color:var(--ink);}
+  .contact .btn.primary{background:var(--paper);color:var(--ink);border-color:var(--paper);}
+  .contact .btn.primary:hover{filter:none;background:color-mix(in srgb, var(--paper) 88%, var(--accent));}
+  footer{padding-block:0 48px;color:var(--muted);font-size:0.9rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
   @media print{
-    nav, footer{display:none;}
-    body{background:white;color:black;padding:0;font-size:11pt;}
-    section{padding-block:20px;border-top:1px solid #ccc;page-break-inside:avoid;}
-    .pcard, .role-card, .contact{box-shadow:none;border:1px solid #ccc;}
-    .pcard:hover{transform:none;box-shadow:none;}
-    .btn{display:none;}
-    a{color:black;}
+    header.site, .theme, figure.arch, .actions, .contact .actions{display:none !important;}
+    body{background:#fff;color:#000;font-size:11pt;}
+    section.block{padding-block:18px;page-break-inside:avoid;}
+    .contact{background:none;color:#000;padding:0;margin:0;}
+    .contact h2,.contact p{color:#000;}
   }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
-  <div class="navrow">
-    <div class="brand">
-      <span class="dot"></span>
-      haider-ali<span class="tld">.dev</span>
-    </div>
-    <div class="navlinks">
-      <a href="#experience"><span class="m">GET</span> /experience</a>
-      <a href="#projects"><span class="m">GET</span> /projects</a>
-      <a href="#skills"><span class="m">GET</span> /skills</a>
-      <a href="#education"><span class="m">GET</span> /education</a>
-      <a href="#contact"><span class="m">POST</span> /contact</a>
+<header class="site">
+  <div class="container bar">
+    <a class="wordmark" href="#top">Haider Ali</a>
+    <div class="bar-right">
+      <nav aria-label="Sections">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme" id="theme" type="button" aria-label="Switch colour theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
     </div>
   </div>
-</nav>
+</header>
 
-<div class="wrap">
+<main id="main">
+<div class="container">
 
-  <!-- HERO -->
-  <section class="hero" id="profile">
-    <div class="status-badge">
-      <span class="code mono">200 OK</span> — Open to permanent Java / backend roles in the UK
-    </div>
-    <h1>Haider Ali</h1>
-    <div class="role">Senior Java Developer — Spring Boot, Microservices | Cloud Native Apps</div>
-    <p class="lede">Senior Software Developer with 6 years of commercial experience architecting and delivering business-critical enterprise systems using Java 17/21, Spring Boot, and microservices. Led the migration of a monolithic enterprise platform into a 22+ microservices architecture on AWS, cutting release cycles from weeks to days while sustaining 99.9%+ production uptime. Expert in REST API development, event streaming (RabbitMQ, Kafka-aware), caching (Redis, Ehcache), and NoSQL databases. Experienced leading and mentoring engineering teams, with full SDLC delivery across agile environments. MSc in Computer Science (University of Greenwich), with hands-on cloud-native and AI-assisted development experience.</p>
-    <p class="loc mono">London, United Kingdom · Full-time UK working rights</p>
-
-    <div class="stats">
-      <div class="stat"><b>6</b><span>years experience</span></div>
-      <div class="stat"><b>22+</b><span>microservices delivered</span></div>
-      <div class="stat"><b>4+2</b><span>engineers led</span></div>
-      <div class="stat"><b>85%+</b><span>test coverage</span></div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="eyebrow"><span class="verb">GET</span> /experience — 200 OK</div>
-    <div class="role-card">
-      <div class="role-head">
-        <h3>Senior Software Engineer — Java</h3>
-        <span class="dates">Sept 2019 – Sept 2025</span>
+  <!-- Hero -->
+  <section class="hero" id="top" aria-labelledby="name">
+    <div>
+      <h1 id="name">Haider Ali</h1>
+      <p class="title">Senior Java Developer</p>
+      <p class="pitch">I design, build and run the backend systems enterprise products depend on: Spring Boot microservices, event-driven messaging and the pipelines that ship them safely.</p>
+      <ul class="facts">
+        <li><span class="live" aria-hidden="true"></span>Open to permanent roles in the UK</li>
+        <li>Based in London</li>
+        <li>Full-time UK working rights</li>
+      </ul>
+      <div class="actions">
+        <a class="btn primary" href="mailto:haider0017@hotmail.com">Email me</a>
+        <a class="btn" href="Haider_Ali_CV.pdf" download>Download CV</a>
+        <a class="btn" href="https://www.linkedin.com/in/haider0017" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-      <div class="role-sub">Global Rescue LLC / GRID Systems (Pvt) Ltd · Islamabad, Pakistan</div>
-      <p class="role-intro"><em>Enterprise travel management platform serving enterprise and consumer users (Java, Spring Boot, microservices).</em> Progressed from Software Engineer to technical lead (2023) to Senior Software Engineer (2024), owning architecture decisions and driving testing and code-quality practices across the team.</p>
+    </div>
 
-      <div class="sub">Architecture &amp; Microservices Migration</div>
-      <ul class="bullets">
-        <li>Architected and delivered a <strong>22+ microservices platform</strong> from a monolithic enterprise system (EJBs, Servlets, JSP, JSF), defining service boundaries, contracts, and data ownership to remove shared-state bottlenecks.</li>
-        <li>Built <strong>production REST APIs</strong> across all 22+ services, covering itinerary management, reporting, user/account management, and real-time location tracking — serving thousands of enterprise and consumer users today. Delivered a <strong>Reporting API</strong> from scratch that replaced a manual, spreadsheet-driven support process.</li>
-        <li>Applied <strong>API-first design</strong> (versioning, contract-first development, consistent error semantics, pagination, caching) so services could evolve independently — cutting release cycles from <strong>weeks to days</strong> and reducing the blast radius of change from whole-platform to single-service.</li>
-      </ul>
+    <figure class="arch">
+      <svg viewBox="0 0 460 380" role="img" aria-labelledby="archTitle archDesc">
+        <title id="archTitle">From monolith to microservices</title>
+        <desc id="archDesc">A single legacy monolith on the left becomes 22 independent services on the right, connected through a RabbitMQ event bus to PostgreSQL, Elasticsearch and Keycloak. The traveller-tracking and search services are highlighted.</desc>
+        <!-- Monolith -->
+        <g class="mono-fade">
+          <rect class="d-mono" x="14" y="34" width="112" height="250" rx="10"/>
+          <text class="d-label d-ink" x="70" y="24" text-anchor="middle">Legacy monolith</text>
+          <text class="d-text d-muted" x="70" y="120" text-anchor="middle">EJB</text>
+          <text class="d-text d-muted" x="70" y="150" text-anchor="middle">Servlets</text>
+          <text class="d-text d-muted" x="70" y="180" text-anchor="middle">JSP · JSF</text>
+          <text class="d-text d-muted" x="70" y="210" text-anchor="middle">shared DB</text>
+        </g>
+        <path d="M140 159 H170" stroke="var(--muted)" stroke-width="2" fill="none"/>
+        <path d="M164 153 L171 159 L164 165" stroke="var(--muted)" stroke-width="2" fill="none"/>
 
-      <div class="sub">Distributed Systems, Event Streaming &amp; Data</div>
-      <ul class="bullets">
-        <li>Replaced synchronous REST calls with <strong>asynchronous messaging and event streaming via RabbitMQ (AMQP)</strong>, cutting inter-service latency by up to <strong>50%</strong>; introduced priority queues, dead-letter queues, and retry logic to fix a production backlog where low-priority traffic was blocking user-facing messages.</li>
-        <li>Integrated <strong>Redis and Ehcache</strong> for caching frequently accessed data, reducing database load and improving response times for high-traffic endpoints.</li>
-        <li>Designed <strong>AOP-based centralised error handling and observability</strong>, cutting critical downtime by <strong>15%</strong> and accelerating incident resolution by <strong>30%</strong>; separately resolved recurring database deadlocks, reducing downtime by a further <strong>40%</strong>.</li>
-        <li>Integrated <strong>Elasticsearch</strong> to replace slow SQL-based search — built custom mappings, analyzers, and query DSL to support full-text, fuzzy, and filtered search, cutting search response times from <strong>~2s to under 300ms (85% faster)</strong>.</li>
-        <li>Optimised complex <strong>SQL, stored procedures, and relational schemas</strong> (MySQL, PostgreSQL) for reporting, billing, and risk-analysis workloads; integrated <strong>Hibernate Envers</strong> for full entity auditing and regulatory traceability.</li>
-      </ul>
+        <text class="d-label d-ink" x="315" y="24" text-anchor="middle">22+ Spring Boot services</text>
+        <!-- Service grid: 4 columns x 6 rows, 22 services -->
+        <g id="grid"></g>
 
-      <div class="sub">Cloud, DevOps &amp; Quality</div>
-      <ul class="bullets">
-        <li>Deployed the platform on <strong>AWS (EC2, S3, Lambda, API Gateway, RDS)</strong>, containerised with <strong>Docker</strong>, orchestrated with <strong>Kubernetes</strong>, and delivered via automated CI/CD — achieving <strong>99.9%+ production uptime</strong> through health checks and automated rollback.</li>
-        <li>Automated build, test, and deployment, eliminating most manual release steps and standardising <strong>trunk-based Git workflows</strong> with peer-reviewed pull requests.</li>
-        <li>Drove <strong>85%+ unit/integration test coverage</strong> using TDD and left-most automated testing (JUnit, Mockito), reducing production defects; led design and code reviews across the team.</li>
-        <li>Monitored production with <strong>Prometheus, Grafana, and AWS CloudWatch</strong> — metrics, dashboards, alerting, and centralised logging for incident diagnosis.</li>
-      </ul>
+        <!-- Event bus -->
+        <g class="bus-in">
+          <rect class="d-bus" x="186" y="292" width="258" height="26" rx="13"/>
+          <text class="d-text d-ink" x="315" y="309" text-anchor="middle">RabbitMQ · async events</text>
+          <g class="d-text d-muted">
+            <rect class="d-box" x="186" y="334" width="80" height="26" rx="6"/>
+            <text x="226" y="351" text-anchor="middle">PostgreSQL</text>
+            <rect class="d-box" x="275" y="334" width="80" height="26" rx="6"/>
+            <text x="315" y="351" text-anchor="middle">Elastic</text>
+            <rect class="d-box" x="364" y="334" width="80" height="26" rx="6"/>
+            <text x="404" y="351" text-anchor="middle">Keycloak</text>
+          </g>
+        </g>
+      </svg>
+      <figcaption>The platform I helped take from one legacy monolith to 22+ independently deployed services. Highlighted: the traveller-tracking module I delivered and the search I rebuilt.</figcaption>
+    </figure>
+  </section>
 
-      <div class="sub">Leadership &amp; Collaboration</div>
-      <ul class="bullets">
-        <li>Led a team of <strong>4 developers plus a 2-person Application Support team</strong> from 2023; ran <strong>30+ technical interviews</strong> and hired 3 strong performers.</li>
-        <li>Trained and mentored <strong>10+ new joiners company-wide</strong>; held weekly calls with the US head office to gather requirements and present architectural decisions to the IT Vice President.</li>
-        <li>Delivered full-stack features across <strong>Java/Spring Boot and React/Angular</strong>, using <strong>Claude Code and ChatGPT</strong> in daily workflow for code generation, refactoring, and test scaffolding.</li>
-      </ul>
+  <!-- Impact -->
+  <section class="block" aria-labelledby="impact-h">
+    <div class="block-head">
+      <div>
+        <h2 id="impact-h">Impact at a glance</h2>
+        <p class="intro">Six years at Global Rescue, a US-headquartered travel risk and crisis response company.</p>
+      </div>
+      <dl class="impact">
+        <div><dt>80,000+</dt><dd>users across 40+ enterprise clients on the platform I worked on</dd></div>
+        <div><dt>Weeks to days</dt><dd>release cycles after I took ownership of CI/CD, at 99.9%+ uptime</dd></div>
+        <div><dt>2s to 300ms</dt><dd>search response time after rebuilding search on Elasticsearch</dd></div>
+        <div><dt>23% faster</dt><dd>API response times after moving non-critical calls to RabbitMQ</dd></div>
+      </dl>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="eyebrow"><span class="verb">GET</span> /projects — 3 results</div>
-    <div class="projects">
+  <!-- Selected work -->
+  <section class="block" id="work" aria-labelledby="work-h">
+    <div class="block-head">
+      <div>
+        <h2 id="work-h">Selected work</h2>
+        <p class="intro">The problems, the decisions I made and what changed.</p>
+      </div>
+      <div>
+        <div class="cases">
 
-      <div class="pcard wide">
-        <div class="prow">
+          <article class="case">
+            <h3>Breaking up a legacy enterprise monolith</h3>
+            <p class="context">Global Rescue, as a core engineer on the migration</p>
+            <dl>
+              <dt>Problem</dt>
+              <dd>A single EJB, Servlet and JSF application served every client. Releases were slow and risky, and a fault anywhere could affect all 80,000 users.</dd>
+              <dt>What I did</dt>
+              <dd>Built Spring Boot services as the platform was split by business capability, including the traveller-tracking module. Migrated 2M+ records for 40+ enterprise clients and moved 100% of users to Keycloak SSO with OAuth2/OIDC.</dd>
+              <dt>Outcome</dt>
+              <dd class="result">22+ independently deployable services, with release cycles cut from weeks to days. The tracking module helped win 3+ new enterprise clients.</dd>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>Java 17</li><li>Spring Boot</li><li>JPA/Hibernate</li><li>Keycloak</li><li>MySQL</li><li>PostgreSQL</li></ul>
+          </article>
+
+          <article class="case">
+            <h3>Moving slow work off the request path</h3>
+            <p class="context">Global Rescue, a decision I proposed and drove</p>
+            <dl>
+              <dt>Problem</dt>
+              <dd>User-facing APIs waited on synchronous calls for work users didn't need to wait for, and low-priority traffic was delaying time-sensitive messages.</dd>
+              <dt>What I did</dt>
+              <dd>Moved non-critical inter-service calls to RabbitMQ events, with priority queues, retries and dead-letter queues so failures were handled rather than lost.</dd>
+              <dt>Outcome</dt>
+              <dd class="result">API response times fell by 23%, and time-sensitive customer journeys were protected from background load.</dd>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>RabbitMQ</li><li>Spring AMQP</li><li>Event-driven design</li></ul>
+          </article>
+
+          <article class="case">
+            <h3>Rebuilding search for speed</h3>
+            <p class="context">Global Rescue</p>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Search ran as SQL queries and took around 2 seconds.</dd>
+              <dt>What I did</dt>
+              <dd>Moved search to Elasticsearch with custom mappings and analysers for full-text, fuzzy and filtered queries.</dd>
+              <dt>Outcome</dt>
+              <dd class="result">Response times dropped from about 2 seconds to under 300ms.</dd>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>Elasticsearch</li><li>Query DSL</li><li>Spring Boot</li></ul>
+          </article>
+
+          <article class="case">
+            <h3>An AI product, shipped end to end on free-tier cloud</h3>
+            <p class="context">Road traffic accident detection, my MSc project (Distinction)</p>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Accidents are usually reported by witnesses, which delays the response. The goal was to detect them in dashcam video and alert a live dashboard within seconds.</dd>
+              <dt>What I did</dt>
+              <dd>Took it from requirements to deployment: a FastAPI inference service on Google Cloud Run, PostgreSQL and Cloudinary for incidents and video, Auth0 securing REST and WebSocket endpoints, and a React dashboard with a live incident map. I kept the model behind its own service boundary so I could later swap in a stronger one without touching the rest of the system.</dd>
+              <dt>Outcome</dt>
+              <dd class="result">Live updates to every connected dashboard. Accuracy rose from 59.4% to 73.8% after the model rebuild, and the whole stack ran on free tiers.</dd>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>FastAPI</li><li>PyTorch</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>Docker</li><li>Google Cloud Run</li><li>Auth0</li></ul>
+          </article>
+
+        </div>
+
+        <div class="others">
           <div>
-            <div class="ppath"><span class="m">GET</span> /projects/accident-detection</div>
-            <h3>Road Traffic Accident Detection &amp; Real-Time Dashboard</h3>
+            <h4>ParkaLot cloud parking platform</h4>
+            <p>Reservations, real-time occupancy and billing across a chain of car parks. I owned the architecture and data model and led the Spring Boot backend. MSc group project.</p>
           </div>
-          <span class="chip">MSc Major Project</span>
-        </div>
-        <p>End-to-end deep learning pipeline classifying dashcam video and pushing live alerts to a web dashboard — from data pipeline through to cloud deployment.</p>
-        <div class="tags">
-          <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">FastAPI</span>
-          <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">PostgreSQL</span>
-          <span class="tag">Docker</span><span class="tag">Google Cloud Run</span><span class="tag">Auth0</span>
-        </div>
-        <ul>
-          <li>Built an end-to-end pipeline classifying dashcam video (R(2+1)D-18, Kinetics-400 pretrained), lifting accuracy from <strong>59.4% → 73.8%</strong> and accident-class F1 from <strong>0.436 → 0.643</strong>.</li>
-          <li>Shipped a JWT-authenticated FastAPI backend on Google Cloud Run with PostgreSQL and Auth0 OAuth2/OIDC, plus a React/TypeScript dashboard with live WebSocket alerts and CSV/PDF export.</li>
-        </ul>
-      </div>
-
-      <div class="pcard">
-        <div class="prow">
           <div>
-            <div class="ppath"><span class="m">GET</span> /projects/parkalot</div>
-            <h3>ParkaLot — Cloud Parking Platform</h3>
+            <h4>InkWave data warehouse</h4>
+            <p>An Oracle warehouse unifying orders, contracts, printing and distribution data for a publisher. I led the dimensional model and wrote the ETL and BI queries. MSc coursework.</p>
           </div>
-          <span class="chip">High Distinction</span>
-        </div>
-        <p>Cloud platform standardising reservations, real-time occupancy tracking, and billing across a chain of parking garages.</p>
-        <div class="tags">
-          <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">React</span>
-        </div>
-        <ul>
-          <li>Owned the architecture and data model, led the Spring Boot backend build, and mentored the group on backend and system design practice.</li>
-          <li>Built reservation and occupancy logic with real-time tracking and automated billing.</li>
-        </ul>
-      </div>
-
-      <div class="pcard">
-        <div class="prow">
-          <div>
-            <div class="ppath"><span class="m">GET</span> /projects/inkwave</div>
-            <h3>InkWave Data Warehouse</h3>
-          </div>
-          <span class="chip">High Distinction</span>
-        </div>
-        <p>Centralised Oracle warehouse unifying orders, contracts, printing and distribution data for an international publisher.</p>
-        <div class="tags">
-          <span class="tag">Oracle SQL</span><span class="tag">ETL</span><span class="tag">Dimensional Modelling</span>
-        </div>
-        <ul>
-          <li>Led the dimensional model and ERD, and wrote the ETL pipelines and complex SQL powering BI dashboards.</li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="eyebrow"><span class="verb">GET</span> /skills</div>
-    <div class="skillgrid">
-      <div class="skillgroup">
-        <span class="k">Languages</span>
-        <div class="chiprow">
-          <span class="tag">Java 17/21</span><span class="tag">Java 8/11</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Frameworks</span>
-        <div class="chiprow">
-          <span class="tag">Spring Boot</span><span class="tag">Spring MVC</span><span class="tag">Hibernate</span><span class="tag">JPA</span><span class="tag">FastAPI</span><span class="tag">Servlets</span><span class="tag">JSP</span><span class="tag">JSF</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Frontend</span>
-        <div class="chiprow">
-          <span class="tag">React</span><span class="tag">Angular</span><span class="tag">HTML5</span><span class="tag">CSS3</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Architecture &amp; Patterns</span>
-        <div class="chiprow">
-          <span class="tag">Microservices</span><span class="tag">SOA</span><span class="tag">Event-Driven</span><span class="tag">API-First</span><span class="tag">DDD</span><span class="tag">AOP</span><span class="tag">Asynchronous Programming</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">APIs</span>
-        <div class="chiprow">
-          <span class="tag">RESTful API Design</span><span class="tag">API Security</span><span class="tag">BFF</span><span class="tag">OpenAPI</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Messaging &amp; Streaming</span>
-        <div class="chiprow">
-          <span class="tag">RabbitMQ (AMQP)</span><span class="tag">Priority Queues</span><span class="tag">DLQ</span><span class="tag">Retry Patterns</span><span class="tag">Kafka-aware</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Caching</span>
-        <div class="chiprow">
-          <span class="tag">Redis</span><span class="tag">Ehcache</span><span class="tag">Caching Strategies</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Cloud &amp; Containers</span>
-        <div class="chiprow">
-          <span class="tag">AWS (EC2, S3, Lambda, API Gateway, RDS)</span><span class="tag">Docker</span><span class="tag">Kubernetes</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Observability</span>
-        <div class="chiprow">
-          <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">AWS CloudWatch</span><span class="tag">Centralised Logging</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">CI/CD &amp; Tooling</span>
-        <div class="chiprow">
-          <span class="tag">Maven</span><span class="tag">Gradle</span><span class="tag">Git</span><span class="tag">GitLab</span><span class="tag">GitHub CI/CD</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Testing</span>
-        <div class="chiprow">
-          <span class="tag">TDD</span><span class="tag">Left-most Testing</span><span class="tag">JUnit</span><span class="tag">Mockito</span><span class="tag">Integration Testing</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Databases</span>
-        <div class="chiprow">
-          <span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span class="tag">Oracle SQL</span><span class="tag">MongoDB</span><span class="tag">Hibernate Envers</span><span class="tag">Data Modelling</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Performance &amp; Search</span>
-        <div class="chiprow">
-          <span class="tag">Low-latency Optimisation</span><span class="tag">Query Plan Tuning</span><span class="tag">Elasticsearch</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">AI-Assisted Development</span>
-        <div class="chiprow">
-          <span class="tag">Claude Code</span><span class="tag">ChatGPT</span><span class="tag">Lovable</span>
-        </div>
-      </div>
-      <div class="skillgroup">
-        <span class="k">Practices</span>
-        <div class="chiprow">
-          <span class="tag">Agile/Scrum</span><span class="tag">Code Review</span><span class="tag">Design Review</span><span class="tag">Production Support</span><span class="tag">Mentoring</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="eyebrow"><span class="verb">GET</span> /education</div>
-    <div class="edu-grid">
-      <div class="edu-block">
-        <h4>Degree</h4>
-        <div class="edu-item">
-          <b>MSc Computer Science</b>
-          <span>University of Greenwich · London, UK · Sept 2025 – Aug 2026</span>
-        </div>
-        <div class="edu-item">
-          <b>BSc Computer Science</b>
-          <span>FAST National University of Computer &amp; Emerging Sciences (NUCES) · Islamabad, Pakistan · Aug 2015 – Aug 2019</span>
-        </div>
+  <!-- Experience -->
+  <section class="block" id="experience" aria-labelledby="exp-h">
+    <div class="block-head">
+      <div>
+        <h2 id="exp-h">Experience</h2>
+        <p class="intro">Global Rescue LLC, a US-headquartered company. I worked from its Islamabad engineering office, Sep 2019 to Sep 2025.</p>
       </div>
-      <div class="edu-block">
-        <h4>Focus Areas</h4>
-        <div class="edu-item">
-          <b>Cloud-Native &amp; Machine Learning</b>
-          <span>MSc specialisation · 2025–2026</span>
+      <ol class="timeline">
+        <li>
+          <div class="role-top"><h3>Senior Software Engineer</h3><span class="dates">Jan 2024 – Sep 2025</span></div>
+          <p class="org">Global Rescue LLC</p>
+          <ul>
+            <li>Led a team of 4 developers and a 2-person application support team; ran 30+ technical interviews, hired 3 engineers and mentored 10+.</li>
+            <li>Made the architectural decision to move non-critical calls to RabbitMQ, cutting API response times by 23%.</li>
+            <li>Built and owned CI/CD pipelines and production releases, shortening release cycles from weeks to days at 99.9%+ uptime.</li>
+            <li>Introduced GitHub Copilot and AI coding assistants with peer review, helping lift test coverage to 65%+.</li>
+            <li>Worked directly with US-based stakeholders and product managers, delivering 3 extra features per quarter.</li>
+            <li>Led L3 production support and root-cause analysis on complex incidents.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="role-top"><h3>Software Engineer</h3><span class="dates">Jan 2022 – Dec 2023</span></div>
+          <p class="org">Global Rescue LLC</p>
+          <ul>
+            <li>Built Spring Boot microservices as part of the monolith decomposition.</li>
+            <li>Implemented Keycloak authentication, authorisation and SSO for 100% of users.</li>
+            <li>Migrated 2M+ business-critical records for 40+ enterprise clients to the new platform.</li>
+            <li>Rebuilt the mass-communication portal, cutting load time from 2 minutes to under a second.</li>
+            <li>Took ownership of production deployments, cutting external DevOps effort by 30%.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="role-top"><h3>Associate Software Engineer</h3><span class="dates">Sep 2019 – Dec 2021</span></div>
+          <p class="org">Global Rescue LLC</p>
+          <ul>
+            <li>Built parsers and integration APIs for GDS travel-data feeds, saving each enterprise client around 3 hours a week.</li>
+            <li>Automated scheduled client reporting and built test coverage from scratch to 30%+.</li>
+            <li>Named Rising Talent of the Year (2020–21) and Developer of the Year (2021–22).</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="block" id="skills" aria-labelledby="skills-h">
+    <div class="block-head">
+      <div>
+        <h2 id="skills-h">Skills</h2>
+        <p class="intro">What I work with day to day, most-used first.</p>
+      </div>
+      <dl class="skills">
+        <div><dt>Core backend</dt><dd>Java 11/17/21, Spring Boot, JPA/Hibernate, REST API design, microservices, SQL</dd></div>
+        <div><dt>Messaging and search</dt><dd>RabbitMQ, event-driven architecture, Kafka, gRPC, Elasticsearch</dd></div>
+        <div><dt>Cloud and delivery</dt><dd>AWS, Google Cloud Run, Docker, Kubernetes, Terraform, Jenkins, GitLab CI, Maven</dd></div>
+        <div><dt>Data</dt><dd>PostgreSQL, MySQL, Redis, Hibernate Envers</dd></div>
+        <div><dt>Security and quality</dt><dd>Keycloak, OAuth2/OIDC, JWT, JUnit, Mockito, TDD, integration testing, Prometheus, Grafana</dd></div>
+        <div><dt>Also</dt><dd>Python (FastAPI), TypeScript, React, Angular, WebSockets, GitHub Copilot, Claude Code</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="block" aria-labelledby="edu-h">
+    <div class="block-head">
+      <div><h2 id="edu-h">Education</h2></div>
+      <div class="edu">
+        <div class="edu-row">
+          <div><b>MSc Computer Science, Distinction</b><p>University of Greenwich, London</p></div>
+          <span class="dates">Sep 2025 – Aug 2026</span>
         </div>
-        <div class="edu-item">
-          <b>Oracle SQL &amp; Data Warehousing</b>
-          <span>Postgraduate coursework · High Distinction</span>
+        <div class="edu-row">
+          <div><b>BSc Computer Science</b><p>FAST National University of Computer &amp; Emerging Sciences, Islamabad</p></div>
+          <span class="dates">Aug 2015 – Aug 2019</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="eyebrow"><span class="verb">POST</span> /contact — ready to respond</div>
-    <div class="contact">
-      <h2>Let's talk about your backend team.</h2>
-      <p>I'm open to permanent Java / backend roles in the UK. The fastest way to reach me is email — I usually respond within a day.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="mailto:haider0017@hotmail.com">✉ Email me</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/haider0017" target="_blank" rel="noopener">in LinkedIn</a>
-        <a class="btn ghost" href="https://github.com/haali512" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="tel:+447741263786">☎ 07741 263786</a>
-      </div>
+  <!-- Contact -->
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">Hiring for a backend team in the UK?</h2>
+    <p>I'm open to permanent senior Java and backend roles, in London or hybrid. Email is the quickest way to reach me; I usually reply within a day.</p>
+    <div class="actions">
+      <a class="btn primary" href="mailto:haider0017@hotmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/haider0017" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/haali512" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="tel:+447741263786">Call 07741 263786</a>
     </div>
   </section>
 
   <footer>
-    <span class="mono">200 OK — built with care · <a href="https://haali512.github.io">haali512.github.io</a></span>
+    <span>© 2026 Haider Ali</span>
+    <a href="#top">Back to top</a>
   </footer>
 
 </div>
+</main>
+
+<script>
+  // Build the 22-service grid in the hero diagram
+  (function(){
+    var g = document.getElementById('grid');
+    var ns = 'http://www.w3.org/2000/svg';
+    var cols = 4, w = 56, h = 30, gx = 11, gy = 11, x0 = 186, y0 = 38;
+    var hot = {5:'tracking', 14:'search'};
+    for (var i = 0; i < 22; i++){
+      var c = i % cols, r = Math.floor(i / cols);
+      var x = x0 + c * (w + gx), y = y0 + r * (h + gy);
+      var grp = document.createElementNS(ns, 'g');
+      grp.setAttribute('class', 'svc');
+      grp.style.setProperty('--i', i);
+      var rect = document.createElementNS(ns, 'rect');
+      rect.setAttribute('x', x); rect.setAttribute('y', y);
+      rect.setAttribute('width', w); rect.setAttribute('height', h);
+      rect.setAttribute('rx', 6);
+      rect.setAttribute('class', hot[i] ? 'd-hot' : 'd-box');
+      grp.appendChild(rect);
+      if (hot[i]){
+        var t = document.createElementNS(ns, 'text');
+        t.setAttribute('x', x + w / 2); t.setAttribute('y', y + 19);
+        t.setAttribute('text-anchor', 'middle');
+        t.setAttribute('class', 'd-text');
+        t.setAttribute('fill', 'var(--accent-ink)');
+        t.textContent = hot[i];
+        grp.appendChild(t);
+      }
+      g.appendChild(grp);
+    }
+    // connectors from each column to the bus
+    for (var k = 0; k < cols; k++){
+      var cx = x0 + k * (w + gx) + w / 2;
+      var line = document.createElementNS(ns, 'path');
+      line.setAttribute('d', 'M' + cx + ' ' + (y0 + 6 * (h + gy) - gy - (k < 2 ? 0 : h + gy)) + ' V292');
+      line.setAttribute('class', 'd-line bus-in');
+      line.setAttribute('stroke-width', '1.5');
+      g.insertBefore(line, g.firstChild);
+    }
+  })();
+
+  // Theme toggle, remembered per visitor
+  (function(){
+    var root = document.documentElement, btn = document.getElementById('theme');
+    try { var saved = localStorage.getItem('theme'); if (saved) root.setAttribute('data-theme', saved); } catch(e){}
+    btn.addEventListener('click', function(){
+      var current = root.getAttribute('data-theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch(e){}
+    });
+  })();
+</script>
 </body>
 </html>
