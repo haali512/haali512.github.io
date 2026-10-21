@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Haider Ali, Senior Backend Engineer</title>
+<title>Haider Ali, Senior Java Developer</title>
 <meta name="description" content="Haider Ali is a London-based Senior Java Developer with 6 years' experience building Spring Boot microservices, event-driven systems and cloud delivery for enterprise platforms.">
 <meta name="author" content="Haider Ali">
 <meta property="og:type" content="profile">
@@ -21,7 +21,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Haider Ali",
-  "jobTitle": "Senior Backend Engineer",
+  "jobTitle": "Senior Java Developer",
   "address": {"@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB"},
   "alumniOf": ["University of Greenwich", "FAST National University of Computer and Emerging Sciences"],
   "knowsAbout": ["Java", "Spring Boot", "Microservices", "Event-driven architecture", "RabbitMQ", "Elasticsearch", "AWS", "CI/CD"],
@@ -100,6 +100,11 @@
   .facts{margin:22px 0 0;padding:0;list-style:none;color:var(--muted);font-size:0.95rem;display:flex;flex-wrap:wrap;gap:6px 22px;}
   .facts li{display:flex;align-items:center;gap:8px;}
   .facts .live{width:8px;height:8px;border-radius:50%;background:#2E9A6B;flex:none;}
+  .direct{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:1rem;font-weight:500;}
+  .direct li{display:flex;align-items:center;gap:9px;}
+  .direct svg{width:18px;height:18px;fill:none;stroke:var(--muted);stroke-width:1.8;stroke-linejoin:round;stroke-linecap:round;flex:none;}
+  .direct a{color:var(--ink);text-decoration:none;font-variant-numeric:tabular-nums;}
+  .direct a:hover{color:var(--accent);text-decoration:underline;}
   .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
   .btn{
     display:inline-flex;align-items:center;gap:8px;
@@ -239,7 +244,7 @@
   <section class="hero" id="top" aria-labelledby="name">
     <div>
       <h1 id="name">Haider Ali</h1>
-      <p class="title">Senior Backend Engineer</p>
+      <p class="title">Senior Java Developer</p>
       <p class="pitch">I design, build and run the backend systems enterprise products depend on: Spring Boot microservices, event-driven messaging and the pipelines that ship them safely.</p>
       <ul class="facts">
         <li><span class="live" aria-hidden="true"></span>Open to permanent roles in the UK</li>
@@ -308,51 +313,6 @@
         <div><dt>2s to 300ms</dt><dd>search response time after rebuilding search on Elasticsearch</dd></div>
         <div><dt>23% faster</dt><dd>API response times after moving non-critical calls to RabbitMQ</dd></div>
       </dl>
-    </div>
-  </section>
-
-  
-  <!-- Experience -->
-  <section class="block" id="experience" aria-labelledby="exp-h">
-    <div class="block-head">
-      <div>
-        <h2 id="exp-h">Experience</h2>
-        <p class="intro">Global Rescue LLC, a US-headquartered company. I worked from its Islamabad engineering office, Sep 2019 to Sep 2025.</p>
-      </div>
-      <ol class="timeline">
-        <li>
-          <div class="role-top"><h3>Senior Software Engineer</h3><span class="dates">Jan 2024 – Sep 2025</span></div>
-          <p class="org">Global Rescue LLC</p>
-          <ul>
-            <li>Led a team of 4 developers and a 2-person application support team; ran 30+ technical interviews, hired 3 engineers and mentored 10+.</li>
-            <li>Made the architectural decision to move non-critical calls to RabbitMQ, cutting API response times by 23%.</li>
-            <li>Built and owned CI/CD pipelines and production releases, shortening release cycles from weeks to days at 99.9%+ uptime.</li>
-            <li>Introduced GitHub Copilot and AI coding assistants with peer review, helping lift test coverage to 65%+.</li>
-            <li>Worked directly with US-based stakeholders and product managers, delivering 3 extra features per quarter.</li>
-            <li>Led L3 production support and root-cause analysis on complex incidents.</li>
-          </ul>
-        </li>
-        <li>
-          <div class="role-top"><h3>Software Engineer</h3><span class="dates">Jan 2022 – Dec 2023</span></div>
-          <p class="org">Global Rescue LLC</p>
-          <ul>
-            <li>Built Spring Boot microservices as part of the monolith decomposition.</li>
-            <li>Implemented Keycloak authentication, authorisation and SSO for 100% of users.</li>
-            <li>Migrated 2M+ business-critical records for 40+ enterprise clients to the new platform.</li>
-            <li>Rebuilt the mass-communication portal, cutting load time from 2 minutes to under a second.</li>
-            <li>Took ownership of production deployments, cutting external DevOps effort by 30%.</li>
-          </ul>
-        </li>
-        <li>
-          <div class="role-top"><h3>Associate Software Engineer</h3><span class="dates">Sep 2019 – Dec 2021</span></div>
-          <p class="org">Global Rescue LLC</p>
-          <ul>
-            <li>Built parsers and integration APIs for GDS travel-data feeds, saving each enterprise client around 3 hours a week.</li>
-            <li>Automated scheduled client reporting and built test coverage from scratch to 30%+.</li>
-            <li>Named Rising Talent of the Year (2020–21) and Developer of the Year (2021–22).</li>
-          </ul>
-        </li>
-      </ol>
     </div>
   </section>
 
@@ -438,6 +398,49 @@
     </div>
   </section>
 
+  <!-- Experience -->
+  <section class="block" id="experience" aria-labelledby="exp-h">
+    <div class="block-head">
+      <div>
+        <h2 id="exp-h">Experience</h2>
+        <p class="intro">Global Rescue LLC, a US-headquartered company. I worked from its Islamabad engineering office, Sep 2019 to Sep 2025.</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <div class="role-top"><h3>Senior Software Engineer</h3><span class="dates">Jan 2024 – Sep 2025</span></div>
+          <p class="org">Global Rescue LLC</p>
+          <ul>
+            <li>Led a team of 4 developers and a 2-person application support team; ran 30+ technical interviews, hired 3 engineers and mentored 10+.</li>
+            <li>Made the architectural decision to move non-critical calls to RabbitMQ, cutting API response times by 23%.</li>
+            <li>Built and owned CI/CD pipelines and production releases, shortening release cycles from weeks to days at 99.9%+ uptime.</li>
+            <li>Introduced GitHub Copilot and AI coding assistants with peer review, helping lift test coverage to 65%+.</li>
+            <li>Worked directly with US-based stakeholders and product managers, delivering 3 extra features per quarter.</li>
+            <li>Led L3 production support and root-cause analysis on complex incidents.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="role-top"><h3>Software Engineer</h3><span class="dates">Jan 2022 – Dec 2023</span></div>
+          <p class="org">Global Rescue LLC</p>
+          <ul>
+            <li>Built Spring Boot microservices as part of the monolith decomposition.</li>
+            <li>Implemented Keycloak authentication, authorisation and SSO for 100% of users.</li>
+            <li>Migrated 2M+ business-critical records for 40+ enterprise clients to the new platform.</li>
+            <li>Rebuilt the mass-communication portal, cutting load time from 2 minutes to under a second.</li>
+            <li>Took ownership of production deployments, cutting external DevOps effort by 30%.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="role-top"><h3>Associate Software Engineer</h3><span class="dates">Sep 2019 – Dec 2021</span></div>
+          <p class="org">Global Rescue LLC</p>
+          <ul>
+            <li>Built parsers and integration APIs for GDS travel-data feeds, saving each enterprise client around 3 hours a week.</li>
+            <li>Automated scheduled client reporting and built test coverage from scratch to 30%+.</li>
+            <li>Named Rising Talent of the Year (2020–21) and Developer of the Year (2021–22).</li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </section>
 
   <!-- Skills -->
   <section class="block" id="skills" aria-labelledby="skills-h">
