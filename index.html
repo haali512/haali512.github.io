@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Haider Ali, Senior Backend Engineer</title>
-<meta name="description" content="Haider Ali is a London-based Senior Backend Engineer with 6 years' experience building Java and Spring Boot microservices, event-driven systems and cloud delivery for enterprise platforms.">
+<meta name="description" content="Haider Ali is a London-based Senior Backend Engineer with 6 years' experience building Java and Spring Boot microservices, event-driven systems and AWS cloud delivery for enterprise platforms.">
 <meta name="author" content="Haider Ali">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Haider Ali, Senior Backend Engineer">
-<meta property="og:description" content="Java and Spring Boot microservices, event-driven systems and cloud delivery. Based in London.">
+<meta property="og:description" content="Java and Spring Boot microservices, event-driven systems and AWS cloud delivery. Based in London.">
 <meta property="og:url" content="https://haali512.github.io">
 <meta property="og:image" content="https://haali512.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
   "jobTitle": "Senior Backend Engineer",
   "address": {"@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB"},
   "alumniOf": ["University of Greenwich", "FAST National University of Computer and Emerging Sciences"],
-  "knowsAbout": ["Java", "Spring Boot", "Microservices", "Event-driven architecture", "RabbitMQ", "Elasticsearch", "AWS", "CI/CD"],
+  "knowsAbout": ["Java", "Spring Boot", "Microservices", "Event-driven architecture", "RabbitMQ", "Amazon SQS", "AWS Lambda", "Amazon ECS", "Amazon RDS", "MySQL", "MongoDB", "Elasticsearch", "Keycloak", "CI/CD"],
   "sameAs": ["https://www.linkedin.com/in/haider0017", "https://github.com/haali512"]
 }
 </script>
@@ -149,7 +149,8 @@
   h3{font-size:1.25rem;font-weight:700;letter-spacing:-0.015em;margin:0;line-height:1.3;}
 
   /* Impact */
-  .impact{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px;margin:0;}
+  .impact{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 32px;margin:0;}
+  @media (max-width:900px){ .impact{grid-template-columns:repeat(2,1fr);} }
   @media (max-width:600px){ .impact{grid-template-columns:1fr;} }
   .impact div{border-left:2px solid var(--accent);padding-left:16px;}
   .impact dt{font-size:1.9rem;font-weight:800;letter-spacing:-0.03em;line-height:1.1;font-variant-numeric:tabular-nums;}
@@ -249,7 +250,7 @@
     <div>
       <h1 id="name">Haider Ali</h1>
       <p class="title">Senior Backend Engineer</p>
-      <p class="pitch">I design, build and run the backend systems enterprise products depend on: Java and Spring Boot microservices, event-driven messaging and the pipelines that ship them safely.</p>
+      <p class="pitch">I design, build and run the backend systems enterprise products depend on: Java and Spring Boot microservices on AWS, event-driven pipelines that never drop a critical event, and releases that ship with zero downtime.</p>
       <ul class="facts">
         <li><span class="live" aria-hidden="true"></span>Open to permanent roles in the UK</li>
         <li>Based in London</li>
@@ -267,9 +268,9 @@
     </div>
 
     <figure class="arch">
-      <svg viewBox="0 0 460 380" role="img" aria-labelledby="archTitle archDesc">
+      <svg viewBox="0 0 460 392" role="img" aria-labelledby="archTitle archDesc">
         <title id="archTitle">From monolith to microservices</title>
-        <desc id="archDesc">A single legacy monolith on the left becomes 22 independent services on the right, connected through a RabbitMQ event bus to PostgreSQL, Elasticsearch and Keycloak. The traveller-tracking and search services are highlighted.</desc>
+        <desc id="archDesc">A single legacy monolith on the left becomes 22 independent services on the right, running on AWS ECS and connected through a RabbitMQ event bus to MySQL on Amazon RDS, Elasticsearch and Keycloak. The traveller-tracking and search services are highlighted.</desc>
         <!-- Monolith -->
         <g class="mono-fade">
           <rect class="d-mono" x="14" y="34" width="112" height="250" rx="10"/>
@@ -282,7 +283,7 @@
         <path d="M140 159 H170" stroke="var(--muted)" stroke-width="2" fill="none"/>
         <path d="M164 153 L171 159 L164 165" stroke="var(--muted)" stroke-width="2" fill="none"/>
 
-        <text class="d-label d-ink" x="315" y="24" text-anchor="middle">22+ Spring Boot services</text>
+        <text class="d-label d-ink" x="315" y="24" text-anchor="middle">22+ Spring Boot services on ECS</text>
         <!-- Service grid: 4 columns x 6 rows, 22 services -->
         <g id="grid"></g>
 
@@ -292,15 +293,16 @@
           <text class="d-text d-ink" x="315" y="309" text-anchor="middle">RabbitMQ · async events</text>
           <g class="d-text d-muted">
             <rect class="d-box" x="186" y="334" width="80" height="26" rx="6"/>
-            <text x="226" y="351" text-anchor="middle">PostgreSQL</text>
+            <text x="226" y="351" text-anchor="middle">RDS MySQL</text>
             <rect class="d-box" x="275" y="334" width="80" height="26" rx="6"/>
             <text x="315" y="351" text-anchor="middle">Elastic</text>
             <rect class="d-box" x="364" y="334" width="80" height="26" rx="6"/>
             <text x="404" y="351" text-anchor="middle">Keycloak</text>
           </g>
+          <text class="d-text d-muted" x="315" y="384" text-anchor="middle">AWS · ALB · API Gateway · CloudWatch</text>
         </g>
       </svg>
-      <figcaption>The platform I helped take from one legacy monolith to 22+ independently deployed services. Highlighted: the traveller-tracking module I delivered and the search I rebuilt.</figcaption>
+      <figcaption>The platform I helped take from one legacy monolith to 22+ independently deployed services on AWS. Highlighted: the traveller-tracking module I delivered and the search I rebuilt.</figcaption>
     </figure>
   </section>
 
@@ -313,7 +315,9 @@
       </div>
       <dl class="impact">
         <div><dt>80,000+</dt><dd>users across 40+ enterprise clients on the platform I worked on</dd></div>
-        <div><dt>Weeks to days</dt><dd>release cycles after I took ownership of CI/CD, at 99.9%+ uptime</dd></div>
+        <div><dt>22+ services</dt><dd>independently deployed on AWS ECS after breaking up a legacy monolith</dd></div>
+        <div><dt>Zero downtime</dt><dd>rolling releases, with release cycles cut from weeks to days at 99.9%+ uptime</dd></div>
+        <div><dt>No lost events</dt><dd>for traveller emergencies, via a guaranteed-delivery pipeline on SQS and Lambda</dd></div>
         <div><dt>2s to 300ms</dt><dd>search response time after rebuilding search on Elasticsearch</dd></div>
         <div><dt>23% faster</dt><dd>API response times after moving non-critical calls to RabbitMQ</dd></div>
       </dl>
@@ -332,12 +336,14 @@
           <div class="role-top"><h3>Senior Software Engineer</h3><span class="dates">Jan 2024 – Sep 2025</span></div>
           <p class="org">Global Rescue LLC</p>
           <ul>
-            <li>Led a team of 4 developers and a 2-person application support team; ran 30+ technical interviews, hired 3 engineers and mentored 10+.</li>
+            <li>Core engineer in breaking a legacy monolith into 22+ Spring Boot microservices on AWS ECS, behind an ALB and API Gateway.</li>
+            <li>Designed a guaranteed-delivery pipeline for traveller emergency events (SQS, Lambda, dead-letter queues, MongoDB) with instant SNS alerts to operations.</li>
             <li>Made the architectural decision to move non-critical calls to RabbitMQ, cutting API response times by 23%.</li>
-            <li>Built and owned CI/CD pipelines and production releases, shortening release cycles from weeks to days at 99.9%+ uptime.</li>
-            <li>Introduced GitHub Copilot and AI coding assistants with peer review, helping lift test coverage to 65%+.</li>
-            <li>Worked directly with US-based stakeholders and product managers, delivering 3 extra features per quarter.</li>
-            <li>Led L3 production support and root-cause analysis on complex incidents.</li>
+            <li>Built and owned CI/CD pipelines with zero-downtime rolling deployments on ECS, shortening release cycles from weeks to days at 99.9%+ uptime.</li>
+            <li>Led a team of 4 developers and a 2-person application support team; wrote design documents and broke them into Jira work; ran 30+ interviews, hired 3 engineers and mentored 10+.</li>
+            <li>Introduced GitHub Copilot and Claude Code with peer review and automated tests, helping lift test coverage to 65%+.</li>
+            <li>Delivered the traveller-tracking module with US-based product stakeholders, helping win 3+ enterprise clients.</li>
+            <li>Led L3 production support with CloudWatch alarms and dashboards, and root-cause analysis on complex incidents.</li>
           </ul>
         </li>
         <li>
@@ -345,8 +351,9 @@
           <p class="org">Global Rescue LLC</p>
           <ul>
             <li>Built Spring Boot microservices as part of the monolith decomposition.</li>
+            <li>Migrated 2M+ business-critical records for 40+ enterprise clients into a database-per-service MySQL model on Amazon RDS (Multi-AZ, read replicas, automated backups).</li>
             <li>Implemented Keycloak authentication, authorisation and SSO for 100% of users.</li>
-            <li>Migrated 2M+ business-critical records for 40+ enterprise clients to the new platform.</li>
+            <li>Delivered Angular client and admin portals, with files stored in Amazon S3 via presigned URLs, for 80,000+ users.</li>
             <li>Rebuilt the mass-communication portal, cutting load time from 2 minutes to under a second.</li>
             <li>Took ownership of production deployments, cutting external DevOps effort by 30%.</li>
           </ul>
@@ -381,11 +388,39 @@
               <dt>Problem</dt>
               <dd>A single EJB, Servlet and JSF application served every client. Releases were slow and risky, and a fault anywhere could affect all 80,000 users.</dd>
               <dt>What I did</dt>
-              <dd>Built Spring Boot services as the platform was split by business capability, including the traveller-tracking module. Migrated 2M+ records for 40+ enterprise clients and moved 100% of users to Keycloak SSO with OAuth2/OIDC.</dd>
+              <dd>Built Spring Boot services as the platform was split by business capability, including the traveller-tracking module. Migrated 2M+ records for 40+ enterprise clients into a database-per-service MySQL model on Amazon RDS, moved 100% of users to Keycloak SSO with OAuth2/OIDC, and ran the services on AWS ECS behind an ALB and API Gateway.</dd>
               <dt>Outcome</dt>
               <dd class="result">22+ independently deployable services, with release cycles cut from weeks to days. The tracking module helped win 3+ new enterprise clients.</dd>
             </dl>
-            <ul class="stack" aria-label="Technologies"><li>Java 17</li><li>Spring Boot</li><li>JPA/Hibernate</li><li>Keycloak</li><li>MySQL</li><li>PostgreSQL</li></ul>
+            <ul class="stack" aria-label="Technologies"><li>Java 17</li><li>Spring Boot</li><li>JPA/Hibernate</li><li>Keycloak</li><li>Amazon RDS (MySQL)</li><li>AWS ECS</li><li>API Gateway</li></ul>
+          </article>
+
+          <article class="case">
+            <h3>Making sure no emergency is ever lost</h3>
+            <p class="context">Global Rescue, a pipeline I designed</p>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Traveller emergency events were rare but critical. If one was dropped or delayed, someone in danger might not get help in time.</dd>
+              <dt>What I did</dt>
+              <dd>Designed a guaranteed-delivery pipeline: events land on Amazon SQS, AWS Lambda processes them, dead-letter queues catch anything that fails, and every event is stored in MongoDB. Amazon SNS alerts the operations team the moment an event arrives.</dd>
+              <dt>Outcome</dt>
+              <dd class="result">Critical events were never lost, and operations could respond to travellers immediately.</dd>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>Amazon SQS</li><li>AWS Lambda</li><li>Dead-letter queues</li><li>MongoDB</li><li>Amazon SNS</li></ul>
+          </article>
+
+          <article class="case">
+            <h3>Releasing without downtime</h3>
+            <p class="context">Global Rescue, CI/CD and infrastructure I owned</p>
+            <dl>
+              <dt>Problem</dt>
+              <dd>Services ran as Docker containers on plain EC2. Scaling was manual, and releases were slow and risky for clients who relied on the platform around the clock.</dd>
+              <dt>What I did</dt>
+              <dd>Moved the services to Amazon ECS behind an Application Load Balancer, with rolling deployments and health checks. Added CloudWatch alarms, metrics and dashboards that the team used for L2/L3 support.</dd>
+              <dt>Outcome</dt>
+              <dd class="result">Zero-downtime releases, with release cycles cut from weeks to days at 99.9%+ uptime.</dd>
+            </dl>
+            <ul class="stack" aria-label="Technologies"><li>Amazon ECS</li><li>ALB</li><li>Docker</li><li>Jenkins</li><li>GitLab CI</li><li>CloudWatch</li></ul>
           </article>
 
           <article class="case">
@@ -455,10 +490,11 @@
       </div>
       <dl class="skills">
         <div><dt>Core backend</dt><dd>Java 11/17/21, Spring Boot, JPA/Hibernate, REST API design, microservices, SQL</dd></div>
-        <div><dt>Messaging and search</dt><dd>RabbitMQ, event-driven architecture, Kafka, gRPC, Elasticsearch</dd></div>
-        <div><dt>Cloud and delivery</dt><dd>AWS, Google Cloud Run, Docker, Kubernetes, Terraform, Jenkins, GitLab CI, Maven</dd></div>
-        <div><dt>Data</dt><dd>PostgreSQL, MySQL, Redis, Hibernate Envers</dd></div>
-        <div><dt>Security and quality</dt><dd>Keycloak, OAuth2/OIDC, JWT, JUnit, Mockito, TDD, integration testing, Prometheus, Grafana</dd></div>
+        <div><dt>AWS</dt><dd>ECS, EC2, ALB, API Gateway, Lambda, SQS, SNS, SES, RDS (MySQL), S3, CloudWatch</dd></div>
+        <div><dt>Messaging and search</dt><dd>RabbitMQ, Amazon SQS/SNS, dead-letter queues, event-driven architecture, gRPC, Elasticsearch</dd></div>
+        <div><dt>Data</dt><dd>MySQL, PostgreSQL, MongoDB, Redis, Hibernate Envers</dd></div>
+        <div><dt>Delivery</dt><dd>Docker, Jenkins, GitLab CI, Maven, Terraform, Google Cloud Run, Kubernetes (personal projects)</dd></div>
+        <div><dt>Security and quality</dt><dd>Keycloak, OAuth2/OIDC, JWT, JUnit, Mockito, TDD, integration testing, JMeter</dd></div>
         <div><dt>Also</dt><dd>Python (FastAPI), TypeScript, React, Angular, WebSockets, GitHub Copilot, Claude Code</dd></div>
       </dl>
     </div>
